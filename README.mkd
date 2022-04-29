@@ -1,0 +1,29 @@
+## cccp.vim - ColorColumn, Cursor Position
+
+A Vim plugin which enables toggling of a `colorcolumn` at the cursor position.
+
+This does **not** do the same thing as `cursorcolumn`. The latter follows the
+cursor around, while this stays put where you've placed it, until toggled.
+
+Use cases:
+
+* Quickly get a grip of alignment issues
+* Impressing your friends
+
+Subsequent calls will toggle the highlight.
+
+### Installation
+
+Throw the plugin into your `$VIMRUNTIME/plugin` directory, i.e `~/.vim/plugin/`.
+
+### Configuration
+
+#### Mappings
+
+No mappings defined by default; play nice.
+
+Here's how you can add a mapping that will toggle like described above:
+
+```vim
+nnoremap <silent> <leader>cc :call CCCP()<cr>
+```
