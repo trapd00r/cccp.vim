@@ -1,4 +1,4 @@
-" Vim global plugin for highlighting the current line
+" Vim global plugin for adding a colorcolumn at the cursor position
 " Maintainer: Magnus Woldrich
 "       Date: 2022-04-29
 
@@ -23,8 +23,10 @@ function! CCCP()
     setlocal colorcolumn&
   else
     let &colorcolumn = column
-    echohl ModeMsg
-    echo 'Colorcolumn set at column ' . column
-    echohl None
+    if &cmdheight > 0
+      echohl ModeMsg
+      echo 'Colorcolumn set at column ' . column
+      echohl None
+    endif
   endif
 endfunction
